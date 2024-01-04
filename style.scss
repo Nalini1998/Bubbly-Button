@@ -1,0 +1,2730 @@
+$fuschia: #ff0081;
+$button-bg: $fuschia;
+$button-text-color: #fff;
+$baby-blue: #f8faff;
+
+body{
+  font-size: 16px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+  background-color: $baby-blue;
+}
+
+.bubbly-button1 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom, #ff6699 10%, #ffffff 98%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#ff6699,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #ff6699 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #ff6699 20%, transparent 30%),
+    radial-gradient(circle, #ff6699 20%, transparent 20%), 
+    radial-gradient(circle, #ff6699 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, #ff6699 20%, transparent 20%),
+    radial-gradient(circle, #ff6699 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #ff6699 20%, transparent 20%), 
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, #ff6699 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, #ff6699 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#ff6699, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#ff6699,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+
+.bubbly-button2 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to top right, #cc33ff 9%, #ffffff 100%);
+  color: $button-text-color;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#cc33ff,5%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%), 
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, $button-bg 20%, transparent 20%), 
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken($button-bg, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button3 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to top left, #ccffff 20%, #ffccff 100%);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#66ffff,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%), 
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, $button-bg 20%, transparent 20%), 
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken($button-bg, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button4 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to top left, #ffff66 0%, #66ffff 100%);
+  color: #333;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
+  box-shadow: 10px 10px 50px 5px darken(#66ffff,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #7FFFD4 20%, transparent 20%),
+      radial-gradient(circle,  transparent 20%, #7FFFD4 20%, transparent 30%),
+      radial-gradient(circle, #7FFFD4 20%, transparent 20%), 
+      radial-gradient(circle, #7FFFD4 20%, transparent 20%),
+      radial-gradient(circle,  transparent 10%, #7FFFD4 15%, transparent 20%),
+      radial-gradient(circle, #7FFFD4 20%, transparent 20%),
+      radial-gradient(circle, #7FFFD4 20%, transparent 20%),
+      radial-gradient(circle, #7FFFD4 20%, transparent 20%),
+      radial-gradient(circle, #7FFFD4 20%, transparent 20%);
+      background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+        }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #7FFFD4 20%, transparent 20%), 
+    radial-gradient(circle, #7FFFD4 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #7FFFD4 15%, transparent 20%),
+    radial-gradient(circle, #7FFFD4 20%, transparent 20%),
+    radial-gradient(circle, #7FFFD4 20%, transparent 20%),
+    radial-gradient(circle, #7FFFD4 20%, transparent 20%),
+    radial-gradient(circle, #7FFFD4 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#7FFFD4, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button5 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to top left, #ffffff 0%, #66ffff 100%);
+  color: #333;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#66ffff,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #00FFFF 20%, transparent 30%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%), 
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #00FFFF 15%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #00FFFF 20%, transparent 20%), 
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #00FFFF 15%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#F0FFFF, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button6 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, #00ccff 0%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#20B2AA,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #20B2AA 20%, transparent 30%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%), 
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #20B2AA 15%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #20B2AA 20%, transparent 20%), 
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #20B2AA 15%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#87CEFA, 2%);
+    box-shadow: 10px 10px 50px 5px darken(#20B2AA,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button7 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #00ff99 9%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#228B22,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #228B22 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #228B21 20%, transparent 30%),
+    radial-gradient(circle, #228B22 20%, transparent 20%), 
+    radial-gradient(circle, #228B22 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #228B22 15%, transparent 20%),
+    radial-gradient(circle, #228B22 20%, transparent 20%),
+    radial-gradient(circle, #228B22 20%, transparent 20%),
+    radial-gradient(circle, #228B22 20%, transparent 20%),
+    radial-gradient(circle, #228B22 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #228B22 20%, transparent 20%), 
+    radial-gradient(circle, #228B22 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #228B22 15%, transparent 20%),
+    radial-gradient(circle, #228B22 20%, transparent 20%),
+    radial-gradient(circle, #228B22 20%, transparent 20%),
+    radial-gradient(circle, #228B22 20%, transparent 20%),
+    radial-gradient(circle, #228B22 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#228B22, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#228B22,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button8 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #669999 9%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#5F9EA0,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #5F9EA0 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #5F9EA0 20%, transparent 30%),
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%), 
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #5F9EA0 15%, transparent 20%),
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%),
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%),
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%),
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #6495ED 20%, transparent 20%), 
+    radial-gradient(circle, #6495ED 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #6495ED 15%, transparent 20%),
+    radial-gradient(circle, #6495ED 20%, transparent 20%),
+    radial-gradient(circle, #6495ED 20%, transparent 20%),
+    radial-gradient(circle, #6495ED 20%, transparent 20%),
+    radial-gradient(circle, #6495ED 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#5F9EA0, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#5F9EA0,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button9 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #00cc99 9%, #ffffff 100%);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#00cc99,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, dodgerblue 20%, transparent 30%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%), 
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, dodgerblue 15%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, dodgerblue 20%, transparent 20%), 
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, dodgerblue 15%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(dodgerblue, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#66ffff,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button10 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #99ff99 0%, #00ccff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(mediumseagreen,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #99ff99 15%, transparent 30%),
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%), 
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%), 
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, mediumseagreen 15%, transparent 20%),
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%),
+    radial-gradient(circle, mediumseagreen 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(mediumseagreen, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#99ff99,5%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button11 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #ff9999 0%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(tomato,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, tomato 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, tomato 15%, transparent 30%),
+    radial-gradient(circle, tomato 20%, transparent 20%), 
+    radial-gradient(circle, tomato 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, tomato 15%, transparent 20%),
+    radial-gradient(circle, tomato 20%, transparent 20%),
+    radial-gradient(circle, tomato 20%, transparent 20%),
+    radial-gradient(circle, tomato 20%, transparent 20%),
+    radial-gradient(circle, tomato 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, tomato 20%, transparent 20%), 
+    radial-gradient(circle, tomato 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, tomato 15%, transparent 20%),
+    radial-gradient(circle, tomato 20%, transparent 20%),
+    radial-gradient(circle, tomato 20%, transparent 20%),
+    radial-gradient(circle, tomato 20%, transparent 20%),
+    radial-gradient(circle, tomato 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, tomato 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(tomato,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button12 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to top right, #fffbd5, #b20a2c);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#fffbd5,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #b20a2c 19%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #b20a2c 15%, transparent 30%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%), 
+    radial-gradient(circle, #b20a2c 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b20a2c 15%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #b20a2c 20%, transparent 20%), 
+    radial-gradient(circle, #b20a2c 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b20a2c 15%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, tomato 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(#fffbd5,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button13 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#fc5c7d,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #fc5c7d 30%, transparent 20%),
+    radial-gradient(circle,  transparent 30%, #fc5c7d 25%, transparent 30%),
+    radial-gradient(circle, #fc5c7d 30%, transparent 20%), 
+    radial-gradient(circle, #fc5c7d 30%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #6a82fb 25%, transparent 20%),
+    radial-gradient(circle, #6a82fb 30%, transparent 20%),
+    radial-gradient(circle, #fc5c7d 30%, transparent 20%),
+    radial-gradient(circle, #6a82fb 30%, transparent 20%),
+    radial-gradient(circle, #fc5c7d 30%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #6a82fb 20%, transparent 20%), 
+    radial-gradient(circle, #fc5c7d 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #fc5c7d 15%, transparent 20%),
+    radial-gradient(circle, #fc5c7d 20%, transparent 20%),
+    radial-gradient(circle, #6a82fb 20%, transparent 20%),
+    radial-gradient(circle, #fc5c7d 20%, transparent 20%),
+    radial-gradient(circle, #6a82fb 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, tomato 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(#fc5c7d,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button14 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#c6ffdd,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #c6ffdd 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #c6ffdd 15%, transparent 30%),
+    radial-gradient(circle, #fbd786 20%, transparent 20%), 
+    radial-gradient(circle, #fbd786 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #f7797d 15%, transparent 20%),
+    radial-gradient(circle, #f7797d 20%, transparent 20%),
+    radial-gradient(circle, #f7797d 20%, transparent 20%),
+    radial-gradient(circle, #fbd786 20%, transparent 20%),
+    radial-gradient(circle, #fbd786 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #c6ffdd 20%, transparent 20%), 
+    radial-gradient(circle, #c6ffdd 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #c6ffdd 15%, transparent 20%),
+    radial-gradient(circle, #fbd786 20%, transparent 20%),
+    radial-gradient(circle, #fbd786 20%, transparent 20%),
+    radial-gradient(circle, #fbd786 20%, transparent 20%),
+    radial-gradient(circle, #f7797d 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, #c6ffdd 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(#c6ffdd,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button15 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#302b63,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #0f0c29 15%, transparent 30%),
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #302b63 15%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b20a2c 15%, transparent 20%),
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, #c6ffdd 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(#c6ffdd,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button16 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #869999, #190a05);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#869999,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #870000 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #870000 15%, transparent 30%),
+    radial-gradient(circle, #870000 20%, transparent 20%), 
+    radial-gradient(circle, #190a05 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #870000 15%, transparent 20%),
+    radial-gradient(circle, #190a05 20%, transparent 20%),
+    radial-gradient(circle, #870000 20%, transparent 20%),
+    radial-gradient(circle, #190a05 20%, transparent 20%),
+    radial-gradient(circle, #870000 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b20a2c 15%, transparent 20%),
+    radial-gradient(circle, #870000 20%, transparent 20%),
+    radial-gradient(circle, #870000 20%, transparent 20%),
+    radial-gradient(circle, #190a05 20%, transparent 20%),
+    radial-gradient(circle, #190a05 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, #302b63 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(#870000,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button17 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#f8b500,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #0f0c29 15%, transparent 30%),
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #302b63 15%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b20a2c 15%, transparent 20%),
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 92%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, #f8b500 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(#f8b500,5%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button18 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FFFFFF;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#302b63,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #0f0c29 15%, transparent 30%),
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #302b63 15%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b20a2c 15%, transparent 20%),
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, #302b63 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(#302b63,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button19 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#2BD2FF,5%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #FA8BFF 30%, transparent 20%),
+    radial-gradient(circle,  transparent 30%, #2BD2FF 25%, transparent 30%),
+    radial-gradient(circle, #2BFF88 30%, transparent 20%), 
+    radial-gradient(circle, #FA8BFF 30%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #2BD2FF 25%, transparent 20%),
+    radial-gradient(circle, #2BFF88 30%, transparent 20%),
+    radial-gradient(circle, #FA8BFF 30%, transparent 20%),
+    radial-gradient(circle, #2BD2FF 30%, transparent 20%),
+    radial-gradient(circle, #2BFF88 30%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #FA8BFF 20%, transparent 20%), 
+    radial-gradient(circle, #2BD2FF 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #2BFF88 15%, transparent 20%),
+    radial-gradient(circle, #FA8BFF 20%, transparent 20%),
+    radial-gradient(circle, #2BD2FF 20%, transparent 20%),
+    radial-gradient(circle, #2BFF88 20%, transparent 20%),
+    radial-gradient(circle, #FA8BFF 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, #2BD2FF 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(lightgray,2%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button20 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+  color: #000; 
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#FFE53B,5%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:   FFE53B FF2525
+    radial-gradient(circle, #FFE53B 30%, transparent 20%),
+    radial-gradient(circle,  transparent 30%, #FF2525 15, transparent 30%),
+    radial-gradient(circle, #FFE53B 30%, transparent 20%), 
+    radial-gradient(circle, #FF2525 30%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #FFE53B 25%, transparent 20%),
+    radial-gradient(circle, #FF2525 30%, transparent 20%),
+    radial-gradient(circle, #FFE53B 30%, transparent 20%),
+    radial-gradient(circle, #FF2525 30%, transparent 20%),
+    radial-gradient(circle, #FFE53B 30%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:   
+    radial-gradient(circle, #FF2525 30%, transparent 20%), 
+    radial-gradient(circle, #FFE53B 30%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #FF2525 25%, transparent 20%),
+    radial-gradient(circle, #FFE53B 30%, transparent 20%),
+    radial-gradient(circle, #FF2525 30%, transparent 20%),
+    radial-gradient(circle, #FFE53B 30%, transparent 20%),
+    radial-gradient(circle, #FF2525 30%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, #FFE53B 0%, #FFE53B 100%);
+  box-shadow: 10px 10px 50px 5px darken(lightgray,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button21 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#FFDEE9,5%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #0f0c29 15%, transparent 30%),
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #302b63 15%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%),
+    radial-gradient(circle, #24243e 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b20a2c 15%, transparent 20%),
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: #FFDEE9;
+    box-shadow: 10px 10px 50px 5px darken(#302b63,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button15 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#302b63,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 30%, transparent 20%),
+    radial-gradient(circle,  transparent 30%, #0f0c29 25%, transparent 30%),
+    radial-gradient(circle, #0f0c29 30%, transparent 20%), 
+    radial-gradient(circle, #302b63 30%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #302b63 25%, transparent 20%),
+    radial-gradient(circle, #24243e 30%, transparent 20%),
+    radial-gradient(circle, #24243e 30%, transparent 20%),
+    radial-gradient(circle, #24243e 30%, transparent 20%),
+    radial-gradient(circle, #24243e 30%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #0f0c29 20%, transparent 20%), 
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b20a2c 15%, transparent 20%),
+    radial-gradient(circle, #0f0c29 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #302b63 20%, transparent 20%),
+    radial-gradient(circle, #b20a2c 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background: linear-gradient(to bottom right, #302b63 0%, #ffffff 100%);
+    box-shadow: 10px 10px 50px 5px darken(#302b63,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+
+/* From button 22 */
+.bubbly-button22{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left, #fff70a, #ddfa00, #b5fc00, #82fe00, #1fff00);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#ddfa00,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #b5fc00 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #b5fc00 20%, transparent 30%),
+    radial-gradient(circle, #b5fc00 20%, transparent 20%), 
+    radial-gradient(circle, #b5fc00 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b5fc00 15%, transparent 20%),
+    radial-gradient(circle, #b5fc00 20%, transparent 20%),
+    radial-gradient(circle, #b5fc00 20%, transparent 20%),
+    radial-gradient(circle, #b5fc00 20%, transparent 20%),
+    radial-gradient(circle, #b5fc00 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #fff70a 20%, transparent 20%), 
+    radial-gradient(circle, #fff70a 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #fff70a 15%, transparent 20%),
+    radial-gradient(circle, #fff70a 20%, transparent 20%),
+    radial-gradient(circle, #fff70a 20%, transparent 20%),
+    radial-gradient(circle, #fff70a 20%, transparent 20%),
+    radial-gradient(circle, #fff70a 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#fff70a, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#ddfa00,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+
+.bubbly-button23{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left, #fff70a, #b8ff61, #71ffa1, #13ffd8, #00fdff); 
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#b8ff61,5%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #fff70a 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #fff70a 20%, transparent 30%),
+    radial-gradient(circle, #b8ff61 20%, transparent 20%), 
+    radial-gradient(circle, #b8ff61 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #71ffa1 15%, transparent 20%),
+    radial-gradient(circle, #71ffa1 20%, transparent 20%),
+    radial-gradient(circle, #13ffd8 20%, transparent 20%),
+    radial-gradient(circle, #13ffd8 20%, transparent 20%),
+    radial-gradient(circle, #00fdff 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #fff70a 20%, transparent 20%), 
+    radial-gradient(circle, #fff70a 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #b8ff61 15%, transparent 20%),
+    radial-gradient(circle, #71ffa1 20%, transparent 20%),
+    radial-gradient(circle, #71ffa1 20%, transparent 20%),
+    radial-gradient(circle, #13ffd8 20%, transparent 20%),
+    radial-gradient(circle, #00fdff 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9); 
+    background-color: darken(#13ffd8, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#b8ff61,5%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button24{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left, #ff00db, #998bff, #00c2ff, #00e5ff, #00fdff);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#66ffff,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%), 
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, $button-bg 20%, transparent 20%), 
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken($button-bg, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button25{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left, #4a0040, #6b0044, #8a0243, #a6193d, #bd3333);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(lightgray,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:   
+      radial-gradient(circle, #4a0040 20%, transparent 20%),
+      radial-gradient(circle,  transparent 20%, #4a0040 20%, transparent 30%),
+      radial-gradient(circle, #6b0044 20%, transparent 20%), 
+      radial-gradient(circle, #6b0044 20%, transparent 20%),
+      radial-gradient(circle,  transparent 10%, #8a0243 15%, transparent 20%),
+      radial-gradient(circle, #a6193d 20%, transparent 20%),
+      radial-gradient(circle, #a6193d 20%, transparent 20%),
+      radial-gradient(circle, #bd3333 20%, transparent 20%),
+      radial-gradient(circle, #bd3333 20%, transparent 20%);
+      background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+        }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:   
+    radial-gradient(circle, #4a0040 20%, transparent 20%), 
+    radial-gradient(circle, #4a0040 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #6b0044 15%, transparent 20%),
+    radial-gradient(circle, #6b0044 20%, transparent 20%),
+    radial-gradient(circle, #8a0243 20%, transparent 20%),
+    radial-gradient(circle, #a6193d 20%, transparent 20%),
+    radial-gradient(circle, #bd3333 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9); 
+    background-color: darken(#8a0243, 5%);
+    box-shadow: 10px 10px 50px 5px darken(lightgray,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button26{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: radial-gradient(circle, #d171d0, #d499e5, #dbbdf3, #e9dffc, #ffffff);
+  color: #333;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#d171d0,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #d171d0 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #d171d0 20%, transparent 30%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%), 
+    radial-gradient(circle, #d499e5 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #00FFFF 15%, transparent 20%),
+    radial-gradient(circle, #d171d0 20%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle, #d171d0 20%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #00FFFF 20%, transparent 20%), 
+    radial-gradient(circle, #d499e5 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #00FFFF 15%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle, #d499e5 20%, transparent 20%),
+    radial-gradient(circle, #00FFFF 20%, transparent 20%),
+    radial-gradient(circle, #d499e5 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#F0FFFF, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button6 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, #00ccff 0%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#20B2AA,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #20B2AA 20%, transparent 30%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%), 
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #20B2AA 15%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #20B2AA 20%, transparent 20%), 
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #20B2AA 15%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%),
+    radial-gradient(circle, #20B2AA 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#87CEFA, 2%);
+    box-shadow: 10px 10px 50px 5px darken(#20B2AA,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button27{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left top, #778ed3, #669fe4, #50b1f1, #35c2fa, #12d2ff, #21d9ff, #30e1ff, #40e8ff, #53e9ff, #63eaff, #70ebff, #7cecff);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#778ed3,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, dodgerblue 20%, transparent 30%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%), 
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, dodgerblue 15%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, dodgerblue 20%, transparent 20%), 
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, dodgerblue 15%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(dodgerblue, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#778ed3,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button28 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left bottom, #d37777, #dc6e71, #e5656a, #ed5a64, #f54d5e, #f64457, #f73951, #f82c4a, #f32441, #ed1b37, #e80f2e, #e20024);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#d37777,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #5F9EA0 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #5F9EA0 20%, transparent 30%),
+    radial-gradient(circle, #f73951 20%, transparent 20%), 
+    radial-gradient(circle, #f73951 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #d37777 15%, transparent 20%),
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%),
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%),
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%),
+    radial-gradient(circle, #5F9EA0 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #f73951 20%, transparent 20%), 
+    radial-gradient(circle, #f73951 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #f73951 15%, transparent 20%),
+    radial-gradient(circle, #6495ED 20%, transparent 20%),
+    radial-gradient(circle, #6495ED 20%, transparent 20%),
+    radial-gradient(circle, #6495ED 20%, transparent 20%),
+    radial-gradient(circle, #6495ED 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#5F9EA0, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#5F9EA0,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button29 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left bottom, #77ced3, #6dd3d7, #62d8da, #56dddd, #47e2df, #3cdfdd, #30dcdc, #1fd9da, #1acdd3, #18c2cc, #19b6c4, #1cabbb);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#00cc99,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, dodgerblue 20%, transparent 30%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%), 
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, dodgerblue 15%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, dodgerblue 20%, transparent 20%), 
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, dodgerblue 15%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(dodgerblue, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#66ffff,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+.bubbly-button30 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #00cc99 9%, #ffffff 100%);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px darken(#00cc99,1%);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, dodgerblue 20%, transparent 30%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%), 
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, dodgerblue 15%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, dodgerblue 20%, transparent 20%), 
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, dodgerblue 15%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%),
+    radial-gradient(circle, dodgerblue 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(dodgerblue, 5%);
+    box-shadow: 10px 10px 50px 5px darken(#66ffff,1%);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+
+@keyframes topBubbles {
+  0%{
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;}
+ 100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0%{
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;}
+ 100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+  }

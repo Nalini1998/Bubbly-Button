@@ -1,0 +1,1892 @@
+body {
+  font-size: 16px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  text-align: center;
+  background-color: #f8faff;
+}
+
+.bubbly-button1 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom, #ff6699 10%, #ffffff 98%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #ff6196;
+}
+.bubbly-button1:focus {
+  outline: 0;
+}
+.bubbly-button1:before, .bubbly-button1:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button1:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff6699 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff6699 20%, transparent 30%), radial-gradient(circle, #ff6699 20%, transparent 20%), radial-gradient(circle, #ff6699 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff6699 20%, transparent 20%), radial-gradient(circle, #ff6699 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button1:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff6699 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff6699 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff6699 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button1:active {
+  transform: scale(0.9);
+  background-color: #ff4d88;
+  box-shadow: 10px 10px 50px 5px #ff6196;
+}
+.bubbly-button1.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button1.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button2 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to top right, #cc33ff 9%, #ffffff 100%);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #c61aff;
+}
+.bubbly-button2:focus {
+  outline: 0;
+}
+.bubbly-button2:before, .bubbly-button2:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button2:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button2:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button2:active {
+  transform: scale(0.9);
+  background-color: #e60074;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button2.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button2.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button3 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to top left, #ccffff 20%, #ffccff 100%);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #61ffff;
+}
+.bubbly-button3:focus {
+  outline: 0;
+}
+.bubbly-button3:before, .bubbly-button3:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button3:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button3:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button3:active {
+  transform: scale(0.9);
+  background-color: #e60074;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button3.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button3.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button4 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to top left, #ffff66 0%, #66ffff 100%);
+  color: #333;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
+  box-shadow: 10px 10px 50px 5px #61ffff;
+}
+.bubbly-button4:focus {
+  outline: 0;
+}
+.bubbly-button4:before, .bubbly-button4:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button4:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, transparent 20%, #7FFFD4 20%, transparent 30%), radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, transparent 10%, #7FFFD4 15%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button4:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, transparent 10%, #7FFFD4 15%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%), radial-gradient(circle, #7FFFD4 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button4:active {
+  transform: scale(0.9);
+  background-color: #66ffcb;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button4.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button4.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button5 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to top left, #ffffff 0%, #66ffff 100%);
+  color: #333;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #61ffff;
+}
+.bubbly-button5:focus {
+  outline: 0;
+}
+.bubbly-button5:before, .bubbly-button5:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button5:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 20%, #00FFFF 20%, transparent 30%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button5:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button5:active {
+  transform: scale(0.9);
+  background-color: #d7ffff;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button5.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button5.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button6 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, #00ccff 0%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #1faea6;
+}
+.bubbly-button6:focus {
+  outline: 0;
+}
+.bubbly-button6:before, .bubbly-button6:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button6:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, transparent 20%, #20B2AA 20%, transparent 30%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, transparent 10%, #20B2AA 15%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button6:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, transparent 10%, #20B2AA 15%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button6:active {
+  transform: scale(0.9);
+  background-color: #7dcafa;
+  box-shadow: 10px 10px 50px 5px #1faea6;
+}
+.bubbly-button6.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button6.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button7 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #00ff99 9%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #218721;
+}
+.bubbly-button7:focus {
+  outline: 0;
+}
+.bubbly-button7:before, .bubbly-button7:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button7:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, transparent 20%, #228B21 20%, transparent 30%), radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, transparent 10%, #228B22 15%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button7:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, transparent 10%, #228B22 15%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%), radial-gradient(circle, #228B22 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button7:active {
+  transform: scale(0.9);
+  background-color: #1d771d;
+  box-shadow: 10px 10px 50px 5px #218721;
+}
+.bubbly-button7.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button7.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button8 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #669999 9%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #5d9b9d;
+}
+.bubbly-button8:focus {
+  outline: 0;
+}
+.bubbly-button8:before, .bubbly-button8:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button8:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, transparent 20%, #5F9EA0 20%, transparent 30%), radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, transparent 10%, #5F9EA0 15%, transparent 20%), radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, #5F9EA0 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button8:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #6495ED 20%, transparent 20%), radial-gradient(circle, #6495ED 20%, transparent 20%), radial-gradient(circle, transparent 10%, #6495ED 15%, transparent 20%), radial-gradient(circle, #6495ED 20%, transparent 20%), radial-gradient(circle, #6495ED 20%, transparent 20%), radial-gradient(circle, #6495ED 20%, transparent 20%), radial-gradient(circle, #6495ED 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button8:active {
+  transform: scale(0.9);
+  background-color: #568e90;
+  box-shadow: 10px 10px 50px 5px #5d9b9d;
+}
+.bubbly-button8.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button8.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button9 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #00cc99 9%, #ffffff 100%);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #00c795;
+}
+.bubbly-button9:focus {
+  outline: 0;
+}
+.bubbly-button9:before, .bubbly-button9:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button9:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 20%, dodgerblue 20%, transparent 30%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button9:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button9:active {
+  transform: scale(0.9);
+  background-color: #0583ff;
+  box-shadow: 10px 10px 50px 5px #61ffff;
+}
+.bubbly-button9.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button9.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button10 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #99ff99 0%, #00ccff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #3baf6f;
+}
+.bubbly-button10:focus {
+  outline: 0;
+}
+.bubbly-button10:before, .bubbly-button10:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button10:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, transparent 20%, #99ff99 15%, transparent 30%), radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, transparent 10%, mediumseagreen 20%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button10:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, transparent 10%, mediumseagreen 15%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%), radial-gradient(circle, mediumseagreen 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button10:active {
+  transform: scale(0.9);
+  background-color: #36a065;
+  box-shadow: 10px 10px 50px 5px #80ff80;
+}
+.bubbly-button10.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button10.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button11 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #ff9999 0%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #ff5f42;
+}
+.bubbly-button11:focus {
+  outline: 0;
+}
+.bubbly-button11:before, .bubbly-button11:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button11:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, transparent 20%, tomato 15%, transparent 30%), radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, transparent 10%, tomato 15%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button11:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, transparent 10%, tomato 15%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%), radial-gradient(circle, tomato 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button11:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, tomato 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #ff5f42;
+}
+.bubbly-button11.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button11.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button12 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to top right, #fffbd5, #b20a2c);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #fffbd0;
+}
+.bubbly-button12:focus {
+  outline: 0;
+}
+.bubbly-button12:before, .bubbly-button12:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button12:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #b20a2c 19%, transparent 20%), radial-gradient(circle, transparent 20%, #b20a2c 15%, transparent 30%), radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b20a2c 15%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button12:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b20a2c 15%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button12:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, tomato 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #fffbd0;
+}
+.bubbly-button12.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button12.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button13 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #fc5779;
+}
+.bubbly-button13:focus {
+  outline: 0;
+}
+.bubbly-button13:before, .bubbly-button13:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button13:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #fc5c7d 30%, transparent 20%), radial-gradient(circle, transparent 30%, #fc5c7d 25%, transparent 30%), radial-gradient(circle, #fc5c7d 30%, transparent 20%), radial-gradient(circle, #fc5c7d 30%, transparent 20%), radial-gradient(circle, transparent 10%, #6a82fb 25%, transparent 20%), radial-gradient(circle, #6a82fb 30%, transparent 20%), radial-gradient(circle, #fc5c7d 30%, transparent 20%), radial-gradient(circle, #6a82fb 30%, transparent 20%), radial-gradient(circle, #fc5c7d 30%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button13:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #6a82fb 20%, transparent 20%), radial-gradient(circle, #fc5c7d 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fc5c7d 15%, transparent 20%), radial-gradient(circle, #fc5c7d 20%, transparent 20%), radial-gradient(circle, #6a82fb 20%, transparent 20%), radial-gradient(circle, #fc5c7d 20%, transparent 20%), radial-gradient(circle, #6a82fb 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button13:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, tomato 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #fc5779;
+}
+.bubbly-button13.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button13.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button14 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #c1ffda;
+}
+.bubbly-button14:focus {
+  outline: 0;
+}
+.bubbly-button14:before, .bubbly-button14:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button14:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #c6ffdd 20%, transparent 20%), radial-gradient(circle, transparent 20%, #c6ffdd 15%, transparent 30%), radial-gradient(circle, #fbd786 20%, transparent 20%), radial-gradient(circle, #fbd786 20%, transparent 20%), radial-gradient(circle, transparent 10%, #f7797d 15%, transparent 20%), radial-gradient(circle, #f7797d 20%, transparent 20%), radial-gradient(circle, #f7797d 20%, transparent 20%), radial-gradient(circle, #fbd786 20%, transparent 20%), radial-gradient(circle, #fbd786 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button14:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #c6ffdd 20%, transparent 20%), radial-gradient(circle, #c6ffdd 20%, transparent 20%), radial-gradient(circle, transparent 10%, #c6ffdd 15%, transparent 20%), radial-gradient(circle, #fbd786 20%, transparent 20%), radial-gradient(circle, #fbd786 20%, transparent 20%), radial-gradient(circle, #fbd786 20%, transparent 20%), radial-gradient(circle, #f7797d 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button14:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, #c6ffdd 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #c1ffda;
+}
+.bubbly-button14.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button14.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button15 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #2e295f;
+}
+.bubbly-button15:focus {
+  outline: 0;
+}
+.bubbly-button15:before, .bubbly-button15:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button15:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 20%, #0f0c29 15%, transparent 30%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, transparent 10%, #302b63 15%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button15:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b20a2c 15%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button15:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, #c6ffdd 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #c1ffda;
+}
+.bubbly-button15.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button15.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button16 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #869999, #190a05);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #839797;
+}
+.bubbly-button16:focus {
+  outline: 0;
+}
+.bubbly-button16:before, .bubbly-button16:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button16:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #870000 20%, transparent 20%), radial-gradient(circle, transparent 20%, #870000 15%, transparent 30%), radial-gradient(circle, #870000 20%, transparent 20%), radial-gradient(circle, #190a05 20%, transparent 20%), radial-gradient(circle, transparent 10%, #870000 15%, transparent 20%), radial-gradient(circle, #190a05 20%, transparent 20%), radial-gradient(circle, #870000 20%, transparent 20%), radial-gradient(circle, #190a05 20%, transparent 20%), radial-gradient(circle, #870000 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button16:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b20a2c 15%, transparent 20%), radial-gradient(circle, #870000 20%, transparent 20%), radial-gradient(circle, #870000 20%, transparent 20%), radial-gradient(circle, #190a05 20%, transparent 20%), radial-gradient(circle, #190a05 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button16:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, #302b63 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #820000;
+}
+.bubbly-button16.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button16.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button17 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #f3b100;
+}
+.bubbly-button17:focus {
+  outline: 0;
+}
+.bubbly-button17:before, .bubbly-button17:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button17:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 20%, #0f0c29 15%, transparent 30%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, transparent 10%, #302b63 15%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button17:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b20a2c 15%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button17:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, #f8b500 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #dfa200;
+}
+.bubbly-button17.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button17.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button18 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FFFFFF;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #2e295f;
+}
+.bubbly-button18:focus {
+  outline: 0;
+}
+.bubbly-button18:before, .bubbly-button18:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button18:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 20%, #0f0c29 15%, transparent 30%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, transparent 10%, #302b63 15%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button18:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b20a2c 15%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button18:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, #302b63 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #2e295f;
+}
+.bubbly-button18.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button18.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button19 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #12cdff;
+}
+.bubbly-button19:focus {
+  outline: 0;
+}
+.bubbly-button19:before, .bubbly-button19:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button19:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #FA8BFF 30%, transparent 20%), radial-gradient(circle, transparent 30%, #2BD2FF 25%, transparent 30%), radial-gradient(circle, #2BFF88 30%, transparent 20%), radial-gradient(circle, #FA8BFF 30%, transparent 20%), radial-gradient(circle, transparent 10%, #2BD2FF 25%, transparent 20%), radial-gradient(circle, #2BFF88 30%, transparent 20%), radial-gradient(circle, #FA8BFF 30%, transparent 20%), radial-gradient(circle, #2BD2FF 30%, transparent 20%), radial-gradient(circle, #2BFF88 30%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button19:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #FA8BFF 20%, transparent 20%), radial-gradient(circle, #2BD2FF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #2BFF88 15%, transparent 20%), radial-gradient(circle, #FA8BFF 20%, transparent 20%), radial-gradient(circle, #2BD2FF 20%, transparent 20%), radial-gradient(circle, #2BFF88 20%, transparent 20%), radial-gradient(circle, #FA8BFF 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button19:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, #2BD2FF 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #cecece;
+}
+.bubbly-button19.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button19.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button20 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #ffe222;
+}
+.bubbly-button20:focus {
+  outline: 0;
+}
+.bubbly-button20:before, .bubbly-button20:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button20:before {
+  display: none;
+  top: -75%;
+  background-image: FFE53B FF2525 radial-gradient(circle, #FFE53B 30%, transparent 20%), radial-gradient(circle, transparent 30%, #FF2525 15, transparent 30%), radial-gradient(circle, #FFE53B 30%, transparent 20%), radial-gradient(circle, #FF2525 30%, transparent 20%), radial-gradient(circle, transparent 10%, #FFE53B 25%, transparent 20%), radial-gradient(circle, #FF2525 30%, transparent 20%), radial-gradient(circle, #FFE53B 30%, transparent 20%), radial-gradient(circle, #FF2525 30%, transparent 20%), radial-gradient(circle, #FFE53B 30%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button20:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #FF2525 30%, transparent 20%), radial-gradient(circle, #FFE53B 30%, transparent 20%), radial-gradient(circle, transparent 10%, #FF2525 25%, transparent 20%), radial-gradient(circle, #FFE53B 30%, transparent 20%), radial-gradient(circle, #FF2525 30%, transparent 20%), radial-gradient(circle, #FFE53B 30%, transparent 20%), radial-gradient(circle, #FF2525 30%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button20:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, #FFE53B 0%, #FFE53B 100%);
+  box-shadow: 10px 10px 50px 5px #d0d0d0;
+}
+.bubbly-button20.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button20.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button21 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #ffc5d8;
+}
+.bubbly-button21:focus {
+  outline: 0;
+}
+.bubbly-button21:before, .bubbly-button21:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button21:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 20%, #0f0c29 15%, transparent 30%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, transparent 10%, #302b63 15%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%), radial-gradient(circle, #24243e 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button21:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b20a2c 15%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button21:active {
+  transform: scale(0.9);
+  background-color: #FFDEE9;
+  box-shadow: 10px 10px 50px 5px #2e295f;
+}
+.bubbly-button21.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button21.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button15 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #2e295f;
+}
+.bubbly-button15:focus {
+  outline: 0;
+}
+.bubbly-button15:before, .bubbly-button15:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button15:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #0f0c29 30%, transparent 20%), radial-gradient(circle, transparent 30%, #0f0c29 25%, transparent 30%), radial-gradient(circle, #0f0c29 30%, transparent 20%), radial-gradient(circle, #302b63 30%, transparent 20%), radial-gradient(circle, transparent 10%, #302b63 25%, transparent 20%), radial-gradient(circle, #24243e 30%, transparent 20%), radial-gradient(circle, #24243e 30%, transparent 20%), radial-gradient(circle, #24243e 30%, transparent 20%), radial-gradient(circle, #24243e 30%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button15:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b20a2c 15%, transparent 20%), radial-gradient(circle, #0f0c29 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #302b63 20%, transparent 20%), radial-gradient(circle, #b20a2c 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button15:active {
+  transform: scale(0.9);
+  background: linear-gradient(to bottom right, #302b63 0%, #ffffff 100%);
+  box-shadow: 10px 10px 50px 5px #2e295f;
+}
+.bubbly-button15.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button15.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+/* From button 22 */
+.bubbly-button22 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left, #fff70a, #ddfa00, #b5fc00, #82fe00, #1fff00);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #d8f500;
+}
+.bubbly-button22:focus {
+  outline: 0;
+}
+.bubbly-button22:before, .bubbly-button22:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button22:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #b5fc00 20%, transparent 20%), radial-gradient(circle, transparent 20%, #b5fc00 20%, transparent 30%), radial-gradient(circle, #b5fc00 20%, transparent 20%), radial-gradient(circle, #b5fc00 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b5fc00 15%, transparent 20%), radial-gradient(circle, #b5fc00 20%, transparent 20%), radial-gradient(circle, #b5fc00 20%, transparent 20%), radial-gradient(circle, #b5fc00 20%, transparent 20%), radial-gradient(circle, #b5fc00 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button22:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #fff70a 20%, transparent 20%), radial-gradient(circle, #fff70a 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff70a 15%, transparent 20%), radial-gradient(circle, #fff70a 20%, transparent 20%), radial-gradient(circle, #fff70a 20%, transparent 20%), radial-gradient(circle, #fff70a 20%, transparent 20%), radial-gradient(circle, #fff70a 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button22:active {
+  transform: scale(0.9);
+  background-color: #f0e800;
+  box-shadow: 10px 10px 50px 5px #d8f500;
+}
+.bubbly-button22.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button22.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button23 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left, #fff70a, #b8ff61, #71ffa1, #13ffd8, #00fdff);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #adff48;
+}
+.bubbly-button23:focus {
+  outline: 0;
+}
+.bubbly-button23:before, .bubbly-button23:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button23:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #fff70a 20%, transparent 20%), radial-gradient(circle, transparent 20%, #fff70a 20%, transparent 30%), radial-gradient(circle, #b8ff61 20%, transparent 20%), radial-gradient(circle, #b8ff61 20%, transparent 20%), radial-gradient(circle, transparent 10%, #71ffa1 15%, transparent 20%), radial-gradient(circle, #71ffa1 20%, transparent 20%), radial-gradient(circle, #13ffd8 20%, transparent 20%), radial-gradient(circle, #13ffd8 20%, transparent 20%), radial-gradient(circle, #00fdff 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button23:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #fff70a 20%, transparent 20%), radial-gradient(circle, #fff70a 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b8ff61 15%, transparent 20%), radial-gradient(circle, #71ffa1 20%, transparent 20%), radial-gradient(circle, #71ffa1 20%, transparent 20%), radial-gradient(circle, #13ffd8 20%, transparent 20%), radial-gradient(circle, #00fdff 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button23:active {
+  transform: scale(0.9);
+  background-color: #00f9cf;
+  box-shadow: 10px 10px 50px 5px #adff48;
+}
+.bubbly-button23.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button23.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button24 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left, #ff00db, #998bff, #00c2ff, #00e5ff, #00fdff);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #61ffff;
+}
+.bubbly-button24:focus {
+  outline: 0;
+}
+.bubbly-button24:before, .bubbly-button24:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button24:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button24:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button24:active {
+  transform: scale(0.9);
+  background-color: #e60074;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button24.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button24.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button25 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left, #4a0040, #6b0044, #8a0243, #a6193d, #bd3333);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #d0d0d0;
+}
+.bubbly-button25:focus {
+  outline: 0;
+}
+.bubbly-button25:before, .bubbly-button25:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button25:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #4a0040 20%, transparent 20%), radial-gradient(circle, transparent 20%, #4a0040 20%, transparent 30%), radial-gradient(circle, #6b0044 20%, transparent 20%), radial-gradient(circle, #6b0044 20%, transparent 20%), radial-gradient(circle, transparent 10%, #8a0243 15%, transparent 20%), radial-gradient(circle, #a6193d 20%, transparent 20%), radial-gradient(circle, #a6193d 20%, transparent 20%), radial-gradient(circle, #bd3333 20%, transparent 20%), radial-gradient(circle, #bd3333 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button25:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #4a0040 20%, transparent 20%), radial-gradient(circle, #4a0040 20%, transparent 20%), radial-gradient(circle, transparent 10%, #6b0044 15%, transparent 20%), radial-gradient(circle, #6b0044 20%, transparent 20%), radial-gradient(circle, #8a0243 20%, transparent 20%), radial-gradient(circle, #a6193d 20%, transparent 20%), radial-gradient(circle, #bd3333 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button25:active {
+  transform: scale(0.9);
+  background-color: #710237;
+  box-shadow: 10px 10px 50px 5px #d0d0d0;
+}
+.bubbly-button25.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button25.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button26 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: radial-gradient(circle, #d171d0, #d499e5, #dbbdf3, #e9dffc, #ffffff);
+  color: #333;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #d06dcf;
+}
+.bubbly-button26:focus {
+  outline: 0;
+}
+.bubbly-button26:before, .bubbly-button26:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button26:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #d171d0 20%, transparent 20%), radial-gradient(circle, transparent 20%, #d171d0 20%, transparent 30%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #d499e5 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #d171d0 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #d171d0 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button26:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #d499e5 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #d499e5 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #d499e5 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button26:active {
+  transform: scale(0.9);
+  background-color: #d7ffff;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button26.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button26.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button6 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, #00ccff 0%, #ffffff 100%);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #1faea6;
+}
+.bubbly-button6:focus {
+  outline: 0;
+}
+.bubbly-button6:before, .bubbly-button6:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button6:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, transparent 20%, #20B2AA 20%, transparent 30%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, transparent 10%, #20B2AA 15%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button6:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, transparent 10%, #20B2AA 15%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%), radial-gradient(circle, #20B2AA 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button6:active {
+  transform: scale(0.9);
+  background-color: #7dcafa;
+  box-shadow: 10px 10px 50px 5px #1faea6;
+}
+.bubbly-button6.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button6.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button27 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left top, #778ed3, #669fe4, #50b1f1, #35c2fa, #12d2ff, #21d9ff, #30e1ff, #40e8ff, #53e9ff, #63eaff, #70ebff, #7cecff);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #738bd2;
+}
+.bubbly-button27:focus {
+  outline: 0;
+}
+.bubbly-button27:before, .bubbly-button27:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button27:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 20%, dodgerblue 20%, transparent 30%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button27:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button27:active {
+  transform: scale(0.9);
+  background-color: #0583ff;
+  box-shadow: 10px 10px 50px 5px #738bd2;
+}
+.bubbly-button27.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button27.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button28 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left bottom, #d37777, #dc6e71, #e5656a, #ed5a64, #f54d5e, #f64457, #f73951, #f82c4a, #f32441, #ed1b37, #e80f2e, #e20024);
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #d27373;
+}
+.bubbly-button28:focus {
+  outline: 0;
+}
+.bubbly-button28:before, .bubbly-button28:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button28:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, transparent 20%, #5F9EA0 20%, transparent 30%), radial-gradient(circle, #f73951 20%, transparent 20%), radial-gradient(circle, #f73951 20%, transparent 20%), radial-gradient(circle, transparent 10%, #d37777 15%, transparent 20%), radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, #5F9EA0 20%, transparent 20%), radial-gradient(circle, #5F9EA0 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button28:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #f73951 20%, transparent 20%), radial-gradient(circle, #f73951 20%, transparent 20%), radial-gradient(circle, transparent 10%, #f73951 15%, transparent 20%), radial-gradient(circle, #6495ED 20%, transparent 20%), radial-gradient(circle, #6495ED 20%, transparent 20%), radial-gradient(circle, #6495ED 20%, transparent 20%), radial-gradient(circle, #6495ED 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button28:active {
+  transform: scale(0.9);
+  background-color: #568e90;
+  box-shadow: 10px 10px 50px 5px #5d9b9d;
+}
+.bubbly-button28.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button28.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button29 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to left bottom, #77ced3, #6dd3d7, #62d8da, #56dddd, #47e2df, #3cdfdd, #30dcdc, #1fd9da, #1acdd3, #18c2cc, #19b6c4, #1cabbb);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #00c795;
+}
+.bubbly-button29:focus {
+  outline: 0;
+}
+.bubbly-button29:before, .bubbly-button29:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button29:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 20%, dodgerblue 20%, transparent 30%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button29:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button29:active {
+  transform: scale(0.9);
+  background-color: #0583ff;
+  box-shadow: 10px 10px 50px 5px #61ffff;
+}
+.bubbly-button29.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button29.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button30 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to bottom right, #00cc99 9%, #ffffff 100%);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: grabbing;
+  position: relative;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.3s;
+  box-shadow: 10px 10px 50px 5px #00c795;
+}
+.bubbly-button30:focus {
+  outline: 0;
+}
+.bubbly-button30:before, .bubbly-button30:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button30:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 20%, dodgerblue 20%, transparent 30%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button30:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%), radial-gradient(circle, dodgerblue 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button30:active {
+  transform: scale(0.9);
+  background-color: #0583ff;
+  box-shadow: 10px 10px 50px 5px #61ffff;
+}
+.bubbly-button30.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button30.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
